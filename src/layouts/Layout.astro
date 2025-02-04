@@ -1,7 +1,7 @@
 ---
 import ArtPlums from "@/components/ArtPlums.astro";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import '../globals.css'
+import "../globals.css";
 import CV from "@cv";
 
 interface Props {
@@ -10,7 +10,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url, theme } = CV.basics;
+const { image, summary, url, theme, meta_description, og_description } =
+  CV.basics;
 ---
 
 <!doctype html>
@@ -18,14 +19,14 @@ const { image, summary, url, theme } = CV.basics;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="description" content={summary.join('\n')} />
+    <meta name="description" content={meta_description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/avatar.jpg" />
-    <link rel="preload" as="image" href={image} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={summary.join('\n')} />
+    <meta property="og:description" content={og_description} />
     <meta property="og:image" content="https://matevosyan.am/avatar.jpg" />
     <meta name="referrer" content="no-referrer" />
   </head>
@@ -65,7 +66,7 @@ const { image, summary, url, theme } = CV.basics;
       h2,
       h3,
       h4 {
-        @apply text-skin-base font-sans;
+        @apply font-sans text-skin-base;
         margin: 0;
       }
 
@@ -82,6 +83,7 @@ const { image, summary, url, theme } = CV.basics;
       .dev * {
         @apply border border-red-500/50 bg-red-500/5;
       }
+
       #hotkeypad [data-backdrop] {
         @apply !bg-zinc-800 !opacity-80;
       }

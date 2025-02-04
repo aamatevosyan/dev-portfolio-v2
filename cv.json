@@ -2,10 +2,12 @@
   "pageLayout": "two-column",
   "basics": {
     "name": "Armen Matevosyan",
-    "label": "Software Engineer",
+    "label": "Software Engineer | Backend Systems, Distributed Architectures & Cloud-Native Expertise",
     "image": "/avatar.jpg",
     "email": "armen@matevosyan.am",
     "url": "https://matevosyan.am",
+    "meta_description": "Software Engineer at Yandex specializing in backend systems, distributed systems, and cloud-native technologies. Passionate about system design, microservices, and scalable architecture. Aspiring Software Architect open to connecting and discussing backend development best practices.",
+    "og_description": "Meet a Software Engineer at Yandex with a passion for building robust, scalable backend systems. Expertise in distributed systems, microservices, and cloud-native tech like Kubernetes and AWS. Aspiring Software Architect eager to collaborate on architectural design and emerging technologies.",
     "summary": [
       "I'm a Software Engineer passionate about building the foundations of robust and scalable applications. I've always been fascinated by system design and how different components interact to create a seamless user experience.",
       "In my current role at Yandex, I'm working on backend systems that handle high traffic and complex business logic. I'm particularly interested in distributed systems, microservices architecture, and cloud-native technologies like Kubernetes and AWS.",
