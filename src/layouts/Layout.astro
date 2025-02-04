@@ -18,23 +18,16 @@ const { image, summary, url, theme } = CV.basics;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="description" content={summary} />
+    <meta name="description" content={summary.join('\n')} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/avatar.png" />
+    <link rel="icon" href="/avatar.jpg" />
     <link rel="preload" as="image" href={image} />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={summary} />
+    <meta property="og:description" content={summary.join('\n')} />
     <meta property="og:image" content="" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
-    <meta property="twitter:url" content={url} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={summary} />
-    <meta name="twitter:image" content="" />
-    {CV?.analyticsCode && <script is:inline src={CV.analyticsCode} />}
   </head>
   <body data-theme={theme} class="relative bg-skin-fill font-sans">
     <div class="absolute top-0 -z-10 h-full w-full print:hidden">

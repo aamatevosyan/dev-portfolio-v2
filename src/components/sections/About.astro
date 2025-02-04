@@ -6,8 +6,13 @@ const { summary } = CV.basics;
 ---
 
 <Section title="About">
-  <p class="font-mono opacity-75 print:font-sans">
-    {summary}
-  </p>
+  {
+    Array.isArray(summary) ? (
+      summary.map((item) => (
+        <p class="font-mono opacity-75 text-sm text-justify print:font-sans">{item}</p>
+      ))
+    ) : (
+      <p class="font-mono opacity-75 print:font-sans">{summary}</p>
+    )
+  }
 </Section>
-
