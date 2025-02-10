@@ -1,5 +1,7 @@
 ---
 import ArtPlums from "@/components/ArtPlums.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "../globals.css";
 import CV from "@cv";
@@ -10,8 +12,7 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url, theme, meta_description, og_description } =
-  CV.basics;
+const { url, theme, meta_description, og_description } = CV.basics;
 ---
 
 <!doctype html>
@@ -21,8 +22,8 @@ const { image, summary, url, theme, meta_description, og_description } =
     <title>{title}</title>
     <meta name="description" content={meta_description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/avatar.jpg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -31,6 +32,8 @@ const { image, summary, url, theme, meta_description, og_description } =
     <meta name="referrer" content="no-referrer" />
   </head>
   <body data-theme={theme} class="relative bg-skin-fill font-sans">
+    <Analytics />
+    <SpeedInsights />
     <div class="absolute top-0 -z-10 h-full w-full print:hidden">
       <div
         class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"

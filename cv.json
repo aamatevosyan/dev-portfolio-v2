@@ -3,7 +3,7 @@
   "basics": {
     "name": "Armen Matevosyan",
     "label": "Software Engineer | Backend Systems, Distributed Architectures & Cloud-Native Expertise",
-    "image": "/avatar.jpg",
+    "image": "./avatar.jpg",
     "email": "armen@matevosyan.am",
     "url": "https://matevosyan.am",
     "meta_description": "Software Engineer at Yandex specializing in backend systems, distributed systems, and cloud-native technologies. Passionate about system design, microservices, and scalable architecture. Aspiring Software Architect open to connecting and discussing backend development best practices.",
